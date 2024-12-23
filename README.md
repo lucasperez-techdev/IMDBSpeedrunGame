@@ -7,7 +7,7 @@ https://nodejs.org/en/download/package-manager
 
 1. **Clone the Repository and run backend flask app**:
   ```bash
-  git clone https://github.com/KalimsCodingWonderland/IMDBSpeedrunGame.git
+  git clone https://github.com/lucasperez-techdev/IMDBSpeedrunGame.git
   cd IMDBSpeedrunGame
   cd backend
   python3 app.py
@@ -16,6 +16,7 @@ https://nodejs.org/en/download/package-manager
    ```bash
    cd IMDBSpeedrunGame
    cd frontend
+   npm install
    npm start
 ```
 3. **Access Link**
