@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  },
+  "dependencies": {
+    "cytoscape": "^3.30.3",
+    "react-cytoscapejs": "^2.0.0",
+    "react-force-graph": "^1.44.7",
+    "react-router-dom": "^7.0.1",
+    "three": "^0.170.0"
+  }
+}
