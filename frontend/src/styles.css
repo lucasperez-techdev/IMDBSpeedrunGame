@@ -1,0 +1,315 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+input {
+  width: 96%;
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #b0b0b0;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: solid;
+  border-color: black;
+  background-color: #ff5621;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff3f00;
+  border-color: white;
+}
+
+.algorithm-selection {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.algorithm-selection select {
+  display: block;
+  margin: 15px auto 0;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2b2b2b;
+  color: #ffffff;
+}
+
+.error {
+  color: #ff5252;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Autocomplete Styles */
+.autocomplete {
+  position: relative;
+}
+
+.suggestions {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 95%;
+  max-height: 250px;
+  overflow-y: auto;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  z-index: 1000;
+  margin-top: 5px;
+}
+
+.suggestions li {
+  padding: 15px;
+  cursor: pointer;
+  color: #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+.suggestions li:hover {
+  background-color: #333333;
+}
+
+.suggestions li strong {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Movie Card Deck Styles */
+.movie-card-deck {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  margin: 40px auto;
+  padding-left: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.movie-card {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card.inactive {
+  opacity: 0;
+  transform: translateX(100%) scale(0.8);
+  z-index: 1;
+}
+
+.movie-card.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  z-index: 2;
+}
+
+.movie-card.start-movie {
+  border: 4px solid #4caf50;
+}
+
+.movie-card.end-movie {
+  border: 4px solid #2196f3;
+}
+
+.nav-arrow {
+  background-color: #ff5621;
+  border: none;
+  color: #000000;
+  font-size: 30px;
+  padding: 10px;
+  /*border-radius: 10%;*/
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  transition: background-color 0.3s ease;
+}
+
+.nav-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000000;
+}
+
+.left-arrow {
+  left: -120px;
+  /* Position to the left of the deck */
+  width: 50px;
+  height: 100px;
+}
+
+.right-arrow {
+  right: -50px;
+  /* Position to the right of the deck */
+  width: 50px;
+  height: 100px;
+}
+
+.movie-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(28, 28, 28, 0.85);
+  color: white;
+  padding: 15px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.movie-info h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.movie-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.connection-info {
+  margin-top: 10px;
+  font-style: italic;
+  color: #b0b0b0;
+}
+
+/* Path Result Styles */
+.path-result ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.path-result li {
+  background-color: #1e1e1e;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  color: #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.path-result li:hover {
+  background-color: #2b2b2b;
+}
+
+.path-result li p {
+  margin: 8px 0;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 30px;
+  color: #e0e0e0;
+}
+
+.loading-more {
+  text-align: center;
+  margin-top: 20px;
+  color: #e0e0e0;
+}
+
+.similar-movies ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.similar-movies li {
+  background-color: #1e1e1e;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  color: #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.similar-movies li:hover {
+  background-color: #2b2b2b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .movie-card {
+    width: 90%;
+  }
+
+  .nav-arrow {
+    font-size: 40px;
+    left: -60px;
+    right: -60px;
+  }
+
+  .container {
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+}
